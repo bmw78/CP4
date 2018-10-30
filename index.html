@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CP4: </title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="index.js"></script>
+        <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+        <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    
+    <body ng-app="ngAnimate">
+        
+        <label>Account Choice: <input type="checkbox" ng-model="chooseGame" ng-init="chooseGame=true" /></label><br/>
+        <label>Game: <input type="checkbox" ng-model="game" ng-init="game=false" /></label><br/>
+        
+        <div ng-if="chooseGame" class="container animate-if">
+            <span id="accounts"></span>
+            Accounts!
+            
+        </div>
+        
+        <div ng-if="game" class="container animate-if">
+            Game!
+        </div>
+        
+        
+    </body>
+</html>
