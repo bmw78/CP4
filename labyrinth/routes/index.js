@@ -21,12 +21,38 @@ router.post('/highscore', function(req, res) {
 module.exports = router;
 
 var highscore = [
-  {
+  /*{
     name: 'Legolas',
     time: '0:01'
   },
   {
     name: 'H4ck3r1337',
     time: '1:30'
+  },
+  {
+    name: 'SlowBro',
+    time: '99:59'
+    
+  },
+  {
+    name: 'Gimli',
+    time: '1:28'
+  }*/
+  {
+    name: 'Legolas',
+    time: '1'
+  },
+  {
+    name: 'H4ck3r1337',
+    time: '30'
+  },
+  {
+    name: 'SlowBro',
+    time: '9959'
+    
+  },
+  {
+    name: 'Gimli',
+    time: '28'
   }
 ];

@@ -4,11 +4,11 @@
 <head>
     <title>CP4: </title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="javascripts/index.js"></script>
-    <meta charset="utf-8">
     <!-- <script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
-    <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/index.css">
 </head>
@@ -18,8 +18,8 @@
 <body>
     <div id='app' ng-app='app' ng-controller='mainCtrl'>
         
-        <label>Account Choice: <input type="checkbox" ng-model="chooseGame" ng-init="chooseGame=true" /></label><br/>
-        <label>Game: <input type="checkbox" ng-model="isGame" ng-init="isGame=true" /></label><br/>
+        <label>Account Choice: <input type="checkbox" ng-model="chooseGame" ng-init="chooseGame=true" ng-click="GameOrScores('score')" /></label><br/>
+        <label>Game: <input type="checkbox" ng-model="isGame" ng-init="isGame=false" ng-click="GameOrScores('game')"/></label><br/>
 
         <div ng-if="chooseGame" class="container animate-if">
             <span id="accounts"></span> Accounts!
@@ -27,7 +27,7 @@
             <ul ng-if='highscore.length' class='list center stretch'>
                 <li ng-repeat='h in highscore' class='highscore'>
                     <h2>{{ h.name }}</h2>
-                    <h3>{{ h.time }}</h3>
+                    <h3>{{ h.time }} seconds</h3>
                 </li>                
             </ul>
             <p ng-if='!highscore.length' class='no-highscore center stretch'>
@@ -37,6 +37,14 @@
 
         <div ng-if="isGame" class="container animate-if">
             Game!
+            
+            <div>
+                <button >Left</button>
+                <button>Up</button>
+                <button>Right</button>
+            </div>
+            
+            
             <div>
                 <form id="newWinner" ng-submit="AddScore()">
                     Name: <input type="text" ng-model="$parent.name"><br>
