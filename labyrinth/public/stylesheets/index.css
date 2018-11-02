@@ -1,0 +1,12 @@
+body {
+    background-image: url("../labylevi/BackgroundGreen.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 35%;
+
+}
+
+.invisibleMine {
+    visibility: hidden;
+}

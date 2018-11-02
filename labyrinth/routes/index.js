@@ -42,7 +42,7 @@ var highscore = [
     name: 'Legolas',
     time: '1'
   },
-  {
+  /*{
     name: 'H4ck3r1337',
     time: '30'
   },
@@ -50,9 +50,9 @@ var highscore = [
     name: 'SlowBro',
     time: '9959'
     
-  },
+  },*/
   {
     name: 'Gimli',
-    time: '28'
+    time: '128'
   }
 ];

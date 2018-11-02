@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="labyrinth.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="game">
+        <!--<canvas id="myCanvas" width="800" height="800"></canvas>-->
+        <canvas id="myCanvas" width="800" height="800"></canvas>
+        <script src="myscript.js"></script>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Up: Forward</h4>
+                <h4>Left: Turn Left</h4>
+                <h4>Right: Turn Right</h4>
+                <h4>Down: N/A</h4>
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    Current Position: <span id="currentPosition">0, 0</span><br>
+                    Current Direction: <span id="currentDirection">East</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
